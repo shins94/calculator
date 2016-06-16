@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Calculator.h"
+#import "InfoViewController.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)openNewView:(id)sender {
+    [self performSegueWithIdentifier:@"purppleview"
+                              sender:self];
+    
+    
+}
+
+- (IBAction)openInfoView:(id)sender {
+    
+    InfoViewController * infoViewController = [self.storyboard
+                                               instantiateViewControllerWithIdentifier: @"infoview"];
+ 
+    
+    infoViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [self presentViewController: infoViewController
+                    animated:YES
+                    completion: nil];
+    
 }
 
 -(void) setButtonEnabled: (BOOL) val{

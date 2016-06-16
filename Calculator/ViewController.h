@@ -15,8 +15,11 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *myButtons;
 
--(void) setButtonEnabled: (BOOL) val;
+- (IBAction)openNewView:(id)sender;
 
+- (IBAction)openInfoView:(id)sender;
+
+-(void) setButtonEnabled: (BOOL) val;
 
 -(void) processDigit:(int) digit;
 -(void) processOp:(char) theOp;
