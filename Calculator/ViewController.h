@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InfoViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController  <InfoViewProtocol>
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
 
@@ -18,6 +19,10 @@
 - (IBAction)openNewView:(id)sender;
 
 - (IBAction)openInfoView:(id)sender;
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+- (IBAction)unwindToViewController:(UIStoryboardSegue*)sender;
+
 
 -(void) setButtonEnabled: (BOOL) val;
 
@@ -37,7 +42,7 @@
 - (IBAction)clickClear:(id)sender;
 
 
-
+- (void) ChangeColor:(UIColor *)newColor;
 
 
 

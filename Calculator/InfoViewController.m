@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@" Text  = %@",self.myString);
+    self.myLabel.text = self.myString;
+    self.myLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,5 +47,17 @@
     
     
 }
+
+- (IBAction)changeColor:(id)sender {
+    
+//    NSLog(@"Change Color");
+    if([self.delegate respondsToSelector:@selector(ChangeColor:)]){
+//        NSLog(@"true");
+        [self.delegate ChangeColor:[UIColor redColor]];
+    }
+    
+}
+
+
 
 @end

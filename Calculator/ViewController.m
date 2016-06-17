@@ -42,9 +42,25 @@
 }
 
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"Segue id = %@",segue.identifier);
+    
+    if([segue.identifier isEqualToString:@"blueview"]) {
+    
+        InfoViewController *infoview = [segue destinationViewController];
+    
+        infoview.myString = @"Hello World";
+    }
+    
+}
+
+
 - (IBAction)openNewView:(id)sender {
-    [self performSegueWithIdentifier:@"purppleview"
+//    [self performSegueWithIdentifier:@"purppleview"
+    [self performSegueWithIdentifier:@"blueview"
                               sender:self];
+    
     
     
 }
@@ -55,11 +71,23 @@
                                                instantiateViewControllerWithIdentifier: @"infoview"];
  
     
+    infoViewController.delegate = self;
+    
     infoViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    [infoViewController setMyString:self.display.text];
+
     
     [self presentViewController: infoViewController
                     animated:YES
                     completion: nil];
+    
+}
+
+
+- (IBAction)unwindToViewController:(UIStoryboardSegue*)sender{
+   
+    NSLog(@"unwindToViewController");
     
 }
 
@@ -217,6 +245,11 @@
     [displayString setString:@""];
     _display.text = displayString;
     
+}
+
+- (void) ChangeColor:(UIColor *)newColor {
+
+    NSLog(@"Change Color");
 }
 
 @end
