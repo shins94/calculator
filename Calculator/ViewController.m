@@ -250,6 +250,11 @@
 - (void) ChangeColor:(UIColor *)newColor {
 
     NSLog(@"Change Color");
+    
+    [self.view setBackgroundColor:newColor];
+    
+    
+    
 }
 
 @end
