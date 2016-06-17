@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C412388A1D13B2130014B89F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C41238891D13B2130014B89F /* ThirdViewController.m */; };
 		C4ECA0721D1239EB009D5DFA /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ECA06F1D1239EB009D5DFA /* Calculator.m */; };
 		C4ECA0731D1239EB009D5DFA /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ECA0711D1239EB009D5DFA /* Fraction.m */; };
 		C4ECA0761D128617009D5DFA /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4ECA0751D128617009D5DFA /* InfoViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41238881D13B2130014B89F /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		C41238891D13B2130014B89F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		C4ECA06E1D1239EB009D5DFA /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		C4ECA06F1D1239EB009D5DFA /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		C4ECA0701D1239EB009D5DFA /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				C4F2EC8C1D1140D100B04DAF /* Supporting Files */,
 				C4ECA0741D128617009D5DFA /* InfoViewController.h */,
 				C4ECA0751D128617009D5DFA /* InfoViewController.m */,
+				C41238881D13B2130014B89F /* ThirdViewController.h */,
+				C41238891D13B2130014B89F /* ThirdViewController.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				C4F2EC911D1140D100B04DAF /* AppDelegate.m in Sources */,
 				C4F2EC8E1D1140D100B04DAF /* main.m in Sources */,
 				C4ECA0731D1239EB009D5DFA /* Fraction.m in Sources */,
+				C412388A1D13B2130014B89F /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Calculator.h"
 #import "InfoViewController.h"
+#import "ThirdViewController.h"
 
 @interface ViewController ()
 
@@ -51,14 +52,24 @@
         InfoViewController *infoview = [segue destinationViewController];
     
         infoview.myString = @"Hello World";
+    } else if ([segue.identifier isEqualToString:@"purppleview"]) {
+    
+        ThirdViewController *thirdview = [segue destinationViewController];
+       
+        [thirdview changeColorFunc:^(UIColor *newColor) {
+            [self.view setBackgroundColor:newColor];
+        }];
+    
     }
+   
+    
     
 }
 
 
 - (IBAction)openNewView:(id)sender {
 //    [self performSegueWithIdentifier:@"purppleview"
-    [self performSegueWithIdentifier:@"blueview"
+    [self performSegueWithIdentifier:@"purppleview"
                               sender:self];
     
     

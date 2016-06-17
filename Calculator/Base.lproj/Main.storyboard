@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="697" y="258"/>
         </scene>
-        <!--View Controller-->
+        <!--Third View Controller-->
         <scene sceneID="sGo-wk-Gy0">
             <objects>
-                <viewController id="FsN-iz-cxX" sceneMemberID="viewController">
+                <viewController id="FsN-iz-cxX" customClass="ThirdViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wH5-ep-5iD"/>
                         <viewControllerLayoutGuide type="bottom" id="IVx-kk-TDi"/>
@@ -249,15 +249,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U14-j6-KRU">
-                                <rect key="frame" x="141" y="393" width="39" height="30"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="qF9-yM-a38" kind="unwind" unwindAction="unwindToViewController:" id="euC-Dq-A7V"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-zG-6Sa">
                                 <rect key="frame" x="119" y="117" width="82" height="21"/>
                                 <constraints>
@@ -267,8 +258,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhU-pg-EFc">
+                                <rect key="frame" x="107" y="276" width="107" height="30"/>
+                                <state key="normal" title="Change Color">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColor:" destination="FsN-iz-cxX" eventType="touchUpInside" id="oO0-fR-tKV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U14-j6-KRU">
+                                <rect key="frame" x="141" y="393" width="39" height="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qF9-yM-a38" kind="unwind" unwindAction="unwindToViewController:" id="euC-Dq-A7V"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="X9U-zG-6Sa" firstAttribute="centerX" secondItem="7t7-BR-UpZ" secondAttribute="centerX" id="L6m-JK-PaF"/>
                             <constraint firstItem="IVx-kk-TDi" firstAttribute="top" secondItem="U14-j6-KRU" secondAttribute="bottom" constant="145" id="ffS-yh-5o9"/>
